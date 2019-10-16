@@ -1,0 +1,14 @@
+@mixin for-sp {
+    @media (max-width: 768px) { @content; }
+  }
+
+@mixin for-pc {
+    @media (min-width: 769px) { @content; }
+  }
+
+  @mixin push-auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
