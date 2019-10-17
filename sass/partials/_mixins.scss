@@ -1,10 +1,27 @@
-@mixin for-sp {
-    @media (max-width: 768px) { @content; }
-  }
+$sp: 375px; 
+$tb: 760px;
+$pc: 980px; 
 
-@mixin for-pc {
-    @media (min-width: 769px) { @content; }
+//@include sp{}
+@mixin sp {
+  @media (max-width: $sp) {
+    @content;
   }
+}
+
+//@include tb{}
+@mixin tb {
+  @media (min-width: $sp) and (max-width: $pc) {
+    @content;
+  }
+}
+
+//@include pc{}
+@mixin pc {
+  @media (min-width: $pc) {
+    @content;
+  }
+}
 
   @mixin push-auto {
     margin: { 

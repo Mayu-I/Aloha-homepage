@@ -1,0 +1,376 @@
+html {
+  font-size: 62.5%;
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  html {
+    font-size: 82.5%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+  color: #2D2D2D;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s;
+  color: #2D2D2D;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 15px;
+}
+
+.header__logo img {
+  width: 200px;
+}
+
+.header__nav {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  .header__nav {
+    width: 380px;
+  }
+}
+
+.header__nav a {
+  color: #D46258;
+}
+
+.header__cart {
+  width: 200px;
+  text-align: right;
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  .header__cart {
+    width: 65px;
+  }
+}
+
+.header__cart img {
+  width: 65px;
+  height: 65px;
+}
+
+.headline {
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.headline__bg {
+  width: 100%;
+  position: relative;
+  background-image: url("/images/flower-bkgd.jpg");
+  background-size: cover;
+  height: 680px;
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  .headline__bg {
+    height: 500px;
+  }
+}
+
+.headline__bg::after {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+}
+
+.headline__bg--main img {
+  width: 100%;
+  height: 100%;
+}
+
+.headline__bg--girl {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.headline__bg--girl img {
+  width: 300px;
+}
+
+.headline__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.headline__title--sub {
+  font-size: 3rem;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.headline__title--main {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.container__headline {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.container__headline--h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3.5rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.container__headline--h2 span {
+  font-style: normal;
+  font-weight: 900;
+}
+
+.container__headline--p {
+  line-height: 2;
+}
+
+.styles__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.styles__flexItem {
+  margin-top: 5px;
+  margin-right: 5px;
+  flex-basis: 25%;
+  height: 360px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 2.8rem;
+  position: relative;
+}
+
+.styles__flexItem p {
+  z-index: 1;
+}
+
+.styles__flexItem::after {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+}
+
+.styles__flexItem:nth-of-type(1) {
+  background-image: url("/images/mens-category.jpg");
+  flex-grow: 1;
+}
+
+.styles__flexItem:nth-of-type(2) {
+  background-image: url("/images/trends-category.jpg");
+}
+
+.styles__flexItem:nth-of-type(3) {
+  background-image: url("/images/glasses-category.jpg");
+  margin-right: 0;
+}
+
+.styles__flexItem:nth-of-type(4) {
+  background-image: url("/images/sale-category.jpg");
+}
+
+.styles__flexItem:nth-of-type(5) {
+  background-image: url("/images/bags-category.jpg");
+}
+
+.styles__flexItem:nth-of-type(6) {
+  background-image: url("/images/womens-category.jpg");
+  flex-grow: 1;
+  margin-right: 0;
+}
+
+.products {
+  margin-bottom: 80px;
+}
+
+.products__slider {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.products__item {
+  flex-basis: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.products__itemCategory {
+  font-size: 1.1rem;
+  color: #969696;
+  margin-bottom: 12px;
+}
+
+.products__itemPrice {
+  font-size: 1.3rem;
+  color: #969696;
+}
+
+.products__itemName {
+  color: #D46157;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 2.1rem;
+  margin-bottom: 12px;
+}
+
+.products__item img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.updates {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.updates__bg {
+  background-image: url("../images/wave-bkgd.jpg");
+  background-size: cover;
+  height: 380px;
+  width: 100%;
+}
+
+.updates__bg::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+}
+
+.updates__content {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.updates__title {
+  font-family: "Playfair Display", serif;
+  text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
+  font-size: 4rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.updates__title span {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.updates__desc {
+  line-height: 2.5;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.updates__form {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.updates__email {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 15px 15px 15px 30px;
+}
+
+.updates__submit {
+  background-color: #D46157;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 5px;
+  border-radius: 50px;
+  color: #ffffff;
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #242424;
+  padding: 60px 100px 60px 40px;
+}
+
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+  height: 140px;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer__desc {
+  font-family: "Playfair Display", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__descAddress {
+  color: #8f8f8f;
+}
+
+.footer__forrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

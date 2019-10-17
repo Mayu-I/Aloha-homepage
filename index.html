@@ -3,12 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>aloha APAREL CO.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/ress.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
 </head>
 
 <body>
@@ -20,7 +24,7 @@
             <a class="header__navItem">FEATURED</a>
             <a class="header__navItem">UPDATES</a>
         </nav>
-        <button class="header__cart"><img src="images/cart-icon.svg" alt="cart-icon"></button>
+        <a href="" class="header__cart"><img src="images/cart-icon.svg" alt="cart-icon"></a>
     </header>
     <main>
         <section class="headline">
@@ -67,19 +71,77 @@
                 <h2 class="container__headline--h2">Most-Crafted <span>Styles</span></h2>
             </div>
             <div class="products__slider">
-                <a href="" class="products__sliderItem">
-                    <div><img src="images/pink-dotted-dress.jpg" alt="">
-                        <p>DRESSES</p>
-                    </div>
+                <a href="" class="products__item">
+                    <img src="images/checked-stretch-dress.jpg" alt="">
+                    <p class="products__itemCategory">DRESSES</p>
+                    <h4 class="products__itemName">Checked Stretch Dress</h4>
+                    <p class="products__itemPrice">$129.00</p>
                 </a>
+                <a href="" class="products__item">
+                    <img src="images/blue-hipster-backpack.jpg" alt="">
+                    <p class="products__itemCategory">BAGS</p>
+                    <h4 class="products__itemName">Blue Hipster Backpack</h4>
+                    <p class="products__itemPrice">$69.00</p>
+                </a>
+                <a href="" class="products__item">
+                    <img src="images/demin-overall-shorts.jpg" alt="">
+                    <p class="products__itemCategory">DENIM</p>
+                    <h4 class="products__itemName">Denim Overall Shorts</h4>
+                    <p class="products__itemPrice">$89.00</p>
+                </a>
+                <a href="" class="products__item">
+                    <img src="images/pink-dotted-dress.jpg" alt="">
+                    <p class="products__itemCategory">DRESSES</p>
+                    <h4 class="products__itemName">Pink Dotted Dress</h4>
+                    <p class="products__itemPrice">$99.00</p>
+                </a>
+                <a href="" class="products__item">
+                    <img src="images/checked-stretch-dress.jpg" alt="">
+                    <p class="products__itemCategory">DRESSES</p>
+                    <h4 class="products__itemName">Checked Stretch Dress</h4>
+                    <p class="products__itemPrice">$129.00</p>
+                </a>
+                <a href="" class="products__item">
+                    <img src="images/blue-hipster-backpack.jpg" alt="">
+                    <p class="products__itemCategory">BAGS</p>
+                    <h4 class="products__itemName">Blue Hipster Backpack</h4>
+                    <p class="products__itemPrice">$69.00</p>
+                </a>
+                <a href="" class="products__item">
+                    <img src="images/demin-overall-shorts.jpg" alt="">
+                    <p class="products__itemCategory">DENIM</p>
+                    <h4 class="products__itemName">Denim Overall Shorts</h4>
+                    <p class="products__itemPrice">$89.00</p>
+                </a>
+                <a href="" class="products__item">
+                    <img src="images/pink-dotted-dress.jpg" alt="">
+                    <p class="products__itemCategory">DRESSES</p>
+                    <h4 class="products__itemName">Pink Dotted Dress</h4>
+                    <p class="products__itemPrice">$99.00</p>
+                </a>
+            </div>
+        </section>
+        <section class="updates">
+            <div class="updates__wrapper">
+                <div class="updates__bg"></div>
+                <div class="updates__content">
+                    <h3 class="updates__title">Sign-up for <span>Updates</span></h3>
+                    <p class="updates__desc">Stay updated on our lates product releases, be first to find out about<br>
+                        upcoming sales, and get free style tips from our blog. Unsbscribe at any time.</p>
+                    <form action="#" class="updates__form">
+                        <input type="email" name="email" class="updates__email" placeholder="Your email">
+                        <input type="submit" value="Subscribe!" class="updates__submit"> </form>
+                </div>
+
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer__flex">
             <div class="footer__desc">
-                <div class="footer__descItem"><b>© 2016 Aloha Apparel Co.<br>Powered by HTML and CSS.</b></div>
-                <div class="footer__descItem"><b>604-604-6040. <a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></b></div>
+                <div class="footer__descItem"><b>&copy; 2016 Aloha Apparel Co.<br>Powered by HTML and CSS.</b></div>
+                <div class="footer__descItem"><b>604-604-6040. <a
+                            href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></b></div>
                 <div class="footer__descItem footer__descAddress">1490 W Broadway<br>Vancouver, BC, Canada</div>
             </div>
             <ul class="footer__forrow">
@@ -91,6 +153,33 @@
             </ul>
         </div>
     </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.products__slider').slick({
+                dots: true,
+                autoplay: true,
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }]
+            });
+        });
+    </script>
+
 </body>
 
 </html>
