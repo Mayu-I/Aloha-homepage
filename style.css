@@ -1,3 +1,67 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway-Medium.eot");
+  src: url("fonts/Raleway-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Medium.woff2") format("woff2"), url("fonts/Raleway-Medium.woff") format("woff"), url("fonts/Raleway-Medium.ttf") format("truetype"), url("fonts/Raleway-Medium.svg#Raleway-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway-LightItalic.eot");
+  src: url("fonts/Raleway-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-LightItalic.woff2") format("woff2"), url("fonts/Raleway-LightItalic.woff") format("woff"), url("fonts/Raleway-LightItalic.ttf") format("truetype"), url("fonts/Raleway-LightItalic.svg#Raleway-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway-MediumItalic.eot");
+  src: url("fonts/Raleway-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-MediumItalic.woff2") format("woff2"), url("fonts/Raleway-MediumItalic.woff") format("woff"), url("fonts/Raleway-MediumItalic.ttf") format("truetype"), url("fonts/Raleway-MediumItalic.svg#Raleway-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("fonts/Raleway-Light.eot");
+  src: url("fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Raleway-Light.woff2") format("woff2"), url("fonts/Raleway-Light.woff") format("woff"), url("fonts/Raleway-Light.ttf") format("truetype"), url("fonts/Raleway-Light.svg#Raleway-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("fonts/PlayfairDisplay-BoldItalic.eot");
+  src: url("fonts/PlayfairDisplay-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2"), url("fonts/PlayfairDisplay-BoldItalic.woff") format("woff"), url("fonts/PlayfairDisplay-BoldItalic.ttf") format("truetype"), url("fonts/PlayfairDisplay-BoldItalic.svg#PlayfairDisplay-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("fonts/PlayfairDisplay-Italic.eot");
+  src: url("fonts/PlayfairDisplay-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/PlayfairDisplay-Italic.woff2") format("woff2"), url("fonts/PlayfairDisplay-Italic.woff") format("woff"), url("fonts/PlayfairDisplay-Italic.ttf") format("truetype"), url("fonts/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("fonts/PlayfairDisplay-Regular.eot");
+  src: url("fonts/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("fonts/PlayfairDisplay-Regular.woff") format("woff"), url("fonts/PlayfairDisplay-Regular.ttf") format("truetype"), url("fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("fonts/PlayfairDisplay-Bold.eot");
+  src: url("fonts/PlayfairDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/PlayfairDisplay-Bold.woff2") format("woff2"), url("fonts/PlayfairDisplay-Bold.woff") format("woff"), url("fonts/PlayfairDisplay-Bold.ttf") format("truetype"), url("fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -5,6 +69,12 @@ html {
 @media (min-width: 375px) and (max-width: 980px) {
   html {
     font-size: 82.5%;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 42.5%;
   }
 }
 
@@ -129,6 +199,12 @@ ul, li {
   width: 300px;
 }
 
+@media (min-width: 375px) and (max-width: 980px) {
+  .headline__bg--girl img {
+    width: 215px;
+  }
+}
+
 .headline__title {
   position: absolute;
   top: 50%;
@@ -141,7 +217,13 @@ ul, li {
 .headline__title--sub {
   font-size: 3rem;
   margin: 10px 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  .headline__title--sub {
+    font-size: 2.3rem;
+  }
 }
 
 .headline__title--main {
@@ -150,6 +232,12 @@ ul, li {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   margin: 10px 0;
   font-weight: normal;
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  .headline__title--main {
+    font-size: 4.5rem;
+  }
 }
 
 .container__headline {
@@ -171,8 +259,20 @@ ul, li {
   font-weight: 900;
 }
 
+@media (min-width: 375px) and (max-width: 980px) {
+  .container__headline--h2 span {
+    font-weight: 700;
+  }
+}
+
 .container__headline--p {
   line-height: 2;
+  padding: 0 30px;
+  font-size: 1.8rem;
+}
+
+.container__headline--p br {
+  display: none;
 }
 
 .styles__flex {
@@ -207,6 +307,12 @@ ul, li {
   color: #ffffff;
   font-size: 2.8rem;
   position: relative;
+}
+
+@media (min-width: 375px) and (max-width: 980px) {
+  .styles__flexItem {
+    height: 220px;
+  }
 }
 
 .styles__flexItem p {
@@ -353,6 +459,12 @@ ul, li {
   margin-bottom: 40px;
 }
 
+@media (max-width: 375px) {
+  .updates__desc {
+    font-size: 1.8rem;
+  }
+}
+
 .updates__form {
   position: relative;
   width: 80%;
@@ -384,6 +496,16 @@ ul, li {
   padding: 60px 100px 60px 40px;
 }
 
+@media (max-width: 375px) {
+  .footer {
+    padding: 50px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,6 +514,15 @@ ul, li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 140px;
+}
+
+@media (max-width: 375px) {
+  .footer__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .footer a {
