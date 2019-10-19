@@ -98,14 +98,10 @@
 }
 
 
-
 html{
     font-size: 62.5%;
     @include tb{
         font-size: 82.5%;
-    }
-    @include sp{
-        font-size: 42.5%;
     }
 }
 
@@ -128,14 +124,28 @@ ul,li{
     list-style: none;
 }
 
+.wrapper{
+    overflow: hidden;
+}
+
 .header{
+    &__flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px 15px;
+    @include sp{
+        border-bottom: 1px solid #D7D7D7;
+        margin: 0 10px;
+        padding: 20px 0; 
+    }
+    }
     &__logo{
         & img{
             width: 200px;
+            @include sp{
+            width: 35vw;
+            }
         }
     }
     &__nav{
@@ -143,10 +153,25 @@ ul,li{
         width: 400px;
         justify-content: space-between;
         @include tb{
-            width: 380px;
+            width: 360px;
         }
         & a{
             color: #D46258;
+        }
+        &--sp{
+            display: none;
+            @include sp{
+                display: flex;
+                width: 85vw;
+                margin: 0 auto;
+                font-size: 4vw;
+                padding: 20px 0;
+            }
+        }
+        &--pc{
+        @include sp{
+            display: none;
+        }
         }
     }
     &__cart{
@@ -158,7 +183,10 @@ ul,li{
         img{
         width: 65px;
         height: 65px;
-
+        @include sp{
+            width: 14vw;
+            height: 14vw;
+        }
     }
     }
 }
@@ -175,6 +203,9 @@ ul,li{
         height: 680px;
         @include tb{
             height: 500px;
+        }
+        @include sp{
+            height: 400px;
         }
         &::after{
             background-color: rgba(0,0,0,0.3); 
@@ -201,6 +232,9 @@ ul,li{
                 @include tb{
                     width: 215px;
                 }
+                @include sp{
+                    width: 40vw;
+                }
             }
         }
     }
@@ -217,15 +251,27 @@ ul,li{
             @include tb{
                 font-size: 2.3rem;
             }
+            @include sp{
+                font-size: 2rem;
+            }
         }
         &--main{
             font-family: $headline-font;
             font-size: 6rem;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
             margin: 10px 0;
-            font-weight: normal;
+            font-weight: 300;
+            & br{
+                display: none;
+                @include sp{
+                    display: block;
+                }
+            }
             @include tb{
                 font-size: 4.5rem;
+            }
+            @include sp{
+                font-size: 3.5rem;
             }
         }
     }
@@ -236,6 +282,9 @@ ul,li{
         text-align: center;
         margin-top: 50px;
         margin-bottom: 60px;
+        @include sp{
+            margin-bottom: 20px;
+        }
         &--h2{
             font-family: 'Playfair Display', serif; 
             font-style: italic;
@@ -254,8 +303,15 @@ ul,li{
         line-height: 2;
         padding: 0 30px;
         font-size: 1.8rem;
+        font-weight: 200;
+        @include sp{
+            padding: 0 10px;
+        }
         & br{
             display: none;
+            @include pc{
+                display: inline;
+            }
         }
     }
     }
@@ -270,19 +326,27 @@ ul,li{
         &Item{
             margin-top: 5px;
             margin-right: 5px;
-            flex-basis: 25%;
-            height: 360px;
+            flex:1;
+            height: 300px;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 400;
             color: #ffffff;
             font-size: 2.8rem;
             position: relative;
             @include tb{
-                height: 220px;
+                height: 210px;
+                margin-right: 10px;
+                margin-top: 10px;
             }
+            @include sp{
+                flex: 2;
+                height: 190px;
+                margin-right: 8px;
+                margin-top: 8px;
+                        }
             p{
             z-index: 1;
             }
@@ -295,28 +359,47 @@ ul,li{
                 bottom: 0;
                 content:"";
             }
+    }
+    &--1{
+        & .styles__flexItem{
             &:nth-of-type(1){ 
                 background-image: url("/images/mens-category.jpg");
-                flex-grow: 1;
+                flex: 2;
+                padding-left: 10px;
+                @include tb{
+                    padding-left: 20px;
+                }
+                @include sp{
+                    flex-basis: 100%;
+                    margin-right: 0;
+                }
             }
             &:nth-of-type(2){ 
                 background-image: url("/images/trends-category.jpg");
             }
             &:nth-of-type(3){ 
-                background-image: url("/images/glasses-category.jpg");
+                background-image: url("/images/glasses-category.jpg");   
                 margin-right: 0;
             }
-            &:nth-of-type(4){ 
+        }
+    }
+    &--2{
+        & .styles__flexItem{
+            &:nth-of-type(1){ 
                 background-image: url("/images/sale-category.jpg");
             }
-            &:nth-of-type(5){ 
+            &:nth-of-type(2){ 
                 background-image: url("/images/bags-category.jpg");
+                @include sp{
+                    margin-right: 0;
+                }
             }
-            &:nth-of-type(6){ 
+            &:nth-of-type(3){ 
                 background-image: url("/images/womens-category.jpg");
-                flex-grow: 1;
+                flex-basis: 100%;
                 margin-right: 0;
             }
+        }
     }
     }
 }
@@ -324,13 +407,14 @@ ul,li{
 .products{
     margin-bottom: 80px;
     &__slider{
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
         width: 100%;
         padding-bottom: 40px;
     }
     &__item{
-        flex-basis: 20%;
+        width: 20%;
+        // flex-basis: 20%;
         display: inline-block;
         text-align: center;
         &Category{
@@ -358,14 +442,14 @@ ul,li{
 
 .updates{
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     &__bg{
         background-image: url("../images/wave-bkgd.jpg");
         background-size: cover;
         height: 380px;
         width: 100%;
         &::after{
-            background-color: rgba(0,0,0,0.2); 
+            background-color: rgba(0,0,0,0.1); 
             position: absolute;
             top: 0;
             right: 0;
@@ -381,10 +465,14 @@ ul,li{
         left: 50%;
         transform: translate(-50%,-50%);
         text-align: center;
+        width: 90%;
+        @include sp{
+            width: 100%;
+        }
     }
     &__title{
         font-family: $headline-font;
-        text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
         font-size: 4rem;
         font-weight: 300;
         font-style: italic;
@@ -393,25 +481,47 @@ ul,li{
             font-weight: 600;
             font-style: normal;
         }
+        @include sp{
+            font-size: 6vw;
+        }
     }
     &__desc{
         line-height: 2.5;
         font-size: 1.8rem;
         margin-bottom: 40px;
+        font-weight: 300;
+        @include tb{
+            line-height: 2.1;
+            & br{
+                display: none;
+            }
+        }
         @include sp{
             font-size: 1.8rem;
+            & br{
+                display: none;
+            }
         }
     }
     &__form{
         position: relative;
-        width: 80%;
+        width: 43%;
         margin: 0 auto;
+        @include tb{
+            width: 70%;
+        }
+        @include sp{
+            width: 85%;
+        }
     }
     &__email{
         width: 100%;
         background-color: #ffffff;
         border-radius: 50px;
         padding: 15px 15px 15px 30px;
+        &::placeholder{
+            color: #b3b3b3;
+        }
     }
     &__submit{
         background-color: #D46157;
@@ -429,8 +539,11 @@ ul,li{
     color: #ffffff;
     background-color: #242424;
     padding: 60px 100px 60px 40px;
+    @include tb{
+        padding: 60px 50px 80px 20px;
+    }
     @include sp{
-        padding: 50px;
+        padding: 50px 50px 80px;
         text-align: center;
         justify-content: center;
     }
@@ -438,6 +551,9 @@ ul,li{
         display: flex;
         justify-content: space-between;
         height: 140px;
+        @include tb{
+            height: 200px;
+        }
         @include sp{
             flex-direction: column;
         }
@@ -450,6 +566,18 @@ ul,li{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include sp{
+            padding-bottom: 20px;
+        }
+        &Item{
+            @include sp{
+            padding-bottom: 10px;
+            font-weight: 300;
+            }
+            & a{
+                text-decoration: underline;
+            }
+        }
         &Address{
             color: #8f8f8f;
         }
@@ -458,5 +586,20 @@ ul,li{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        font-weight: 300;
+        @include sp{
+            flex-direction: row;
+            width: 45vw;
+            margin: 0 auto;
+        }
+        & .fab{
+            width: 35px;
+        }
+        & span{
+            @include sp{
+                display: none;
+            }
+        }
     }
 }
+
