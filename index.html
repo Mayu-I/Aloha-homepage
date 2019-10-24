@@ -18,18 +18,18 @@
             <div class="header__flex">
                 <div class="header__logo"><img src="images/aloha-logo.svg" alt="aloha APPREL CO."></div>
                 <nav class="header__nav header__nav--pc">
-                    <a class="header__navItem" href="">ABOUT</a>
-                    <a class="header__navItem" href="">SHOP</a>
-                    <a class="header__navItem" href="">FEATURED</a>
-                    <a class="header__navItem" href="">UPDATES</a>
+                    <a class="header__navItem" href="#about">ABOUT</a>
+                    <a class="hea der__navItem" href="#shop">SHOP</a>
+                    <a class="header__navItem" href="#featured">FEATURED</a>
+                    <a class="header__navItem" href="#updates">UPDATES</a>
                 </nav>
                 <a href="" class="header__cart"><img src="images/cart-icon.svg" alt="cart-icon"></a>
             </div>
             <nav class="header__nav header__nav--sp">
-                <a class="header__navItem" href="">ABOUT</a>
-                <a class="header__navItem" href="">SHOP</a>
-                <a class="header__navItem" href="">FEATURED</a>
-                <a class="header__navItem" href="">UPDATES</a>
+                <a class="header__navItem" href="#about">ABOUT</a>
+                <a class="header__navItem" href="#shop">SHOP</a>
+                <a class="header__navItem" href="#featured">FEATURED</a>
+                <a class="header__navItem" href="#updates">UPDATES</a>
             </nav>
         </header>
         <main>
@@ -45,13 +45,13 @@
                 <!--headline__title-->
             </section>
             <!--headline-->
-            <section class="container styles">
+            <section class="container styles" id="about">
                 <div class="container__headline">
                     <h2 class="container__headline--h2">Hand-Crafted <span>Styles</span></h2>
                     <p class="container__headline--p">Aloha Apparel Co. sells only the finest ready-to-travel clothig.
                         Browse out <br>current selection of products or sign-up for updates below.</p>
                 </div>
-                <div class="styles__flex styles__flex--1">
+                <div class="styles__flex styles__flex--1" id="shop">
                     <a href="" class="styles__flexItem">
                         <p>MEN'S</p>
                     </a>
@@ -74,7 +74,7 @@
                     </a>
                 </div>
             </section>
-            <section class="container products">
+            <section class="container products" id="featured">
                 <div class="container__headline">
                     <h2 class="container__headline--h2">Most-Crafted <span>Styles</span></h2>
                 </div>
@@ -129,7 +129,7 @@
                     </a>
                 </div>
             </section>
-            <section class="updates">
+            <section class="updates" id="updates">
                 <div class="updates__wrapper">
                     <div class="updates__bg"></div>
                     <div class="updates__content">
@@ -139,7 +139,8 @@
                             upcoming sales, and get free style tips from our blog. Unsbscribe at any time.</p>
                         <form action="#" class="updates__form">
                             <input type="email" name="email" class="updates__email" placeholder="Your Email">
-                            <input type="submit" value="Subscribe!" class="updates__submit"> </form>
+                            <input type="submit" value="Subscribe!" class="updates__submit" onClick="subscribeBtn()">
+                        </form>
                     </div>
 
                 </div>
@@ -149,7 +150,7 @@
             <div class="footer__flex">
                 <div class="footer__desc">
                     <div class="footer__descItem"><b>&copy; 2016 Aloha Apparel Co.<br>Powered by HTML and CSS.</b></div>
-                    <div class="footer__descItem"><b>604-604-6040. <a
+                    <div class="footer__descItem"><b><a href="tel:604-604-6040">604-604-6040.</a> <a
                                 href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></b></div>
                     <div class="footer__descItem footer__descAddress">1490 W Broadway<br>Vancouver, BC, Canada</div>
                 </div>
@@ -168,7 +169,7 @@
             </div>
         </footer>
     </div>
-
+    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/be014b79a7.js" crossorigin="anonymous"></script>
