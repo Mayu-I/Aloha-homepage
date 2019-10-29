@@ -16,14 +16,16 @@
     <div class="wrapper">
         <header class="header">
             <div class="header__flex">
-                <div class="header__logo"><img src="images/aloha-logo.svg" alt="aloha APPREL CO."></div>
+                <a href="/" class="header__logo"><img src="images/aloha-logo.svg" alt="aloha APPREL CO."></a>
                 <nav class="header__nav header__nav--pc">
                     <a class="header__navItem" href="#about">ABOUT</a>
                     <a class="hea der__navItem" href="#shop">SHOP</a>
                     <a class="header__navItem" href="#featured">FEATURED</a>
                     <a class="header__navItem" href="#updates">UPDATES</a>
                 </nav>
-                <a href="" class="header__cart"><img src="images/cart-icon.svg" alt="cart-icon"></a>
+                <a class="header__cart"><img src="images/cart-icon.svg" alt="cart-icon">
+                    <p class="header__cartNum header__cartNum-hide"></p>
+                </a>
             </div>
             <nav class="header__nav header__nav--sp">
                 <a class="header__navItem" href="#about">ABOUT</a>
@@ -35,12 +37,16 @@
         <main>
             <section class="headline">
                 <div class="headline__bg">
-                    <div class="headline__bg--girl"><img src="images/banner-girl.png" alt=""></div>
+                    <div class="headline__bg--girl headline__bg--girl--pc"><img src="images/banner-girl.png" alt="">
+                    </div>
+                    <div class="headline__bg--girl headline__bg--girl--sp"><img src="images/banner-girl-mobile.png"
+                            alt="">
+                    </div>
                 </div>
                 <!--headline__bg-->
                 <div class="headline__title">
                     <p class="headline__title--sub">NEW COLLECTION</p>
-                    <h1 class="headline__title--main">Spring/Summer 2019</h1>
+                    <h1 class="headline__title--main">Spring/Summer<br> 2019</h1>
                 </div>
                 <!--headline__title-->
             </section>
@@ -76,57 +82,65 @@
             </section>
             <section class="container products" id="featured">
                 <div class="container__headline">
-                    <h2 class="container__headline--h2">Most-Crafted <span>Styles</span></h2>
+                    <h2 class="container__headline--h2">Most-Loved <span>Products</span></h2>
                 </div>
                 <div class="products__slider">
-                    <a href="" class="products__item">
+                    <div href="" class="products__item">
                         <img src="images/checked-stretch-dress.jpg" alt="">
                         <p class="products__itemCategory">DRESSES</p>
                         <h4 class="products__itemName">Checked Stretch Dress</h4>
                         <p class="products__itemPrice">$129.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/blue-hipster-backpack.jpg" alt="">
                         <p class="products__itemCategory">BAGS</p>
                         <h4 class="products__itemName">Blue Hipster Backpack</h4>
                         <p class="products__itemPrice">$69.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/demin-overall-shorts.jpg" alt="">
                         <p class="products__itemCategory">DENIM</p>
                         <h4 class="products__itemName">Denim Overall Shorts</h4>
                         <p class="products__itemPrice">$89.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/pink-dotted-dress.jpg" alt="">
                         <p class="products__itemCategory">DRESSES</p>
                         <h4 class="products__itemName">Pink Dotted Dress</h4>
                         <p class="products__itemPrice">$99.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/checked-stretch-dress.jpg" alt="">
                         <p class="products__itemCategory">DRESSES</p>
                         <h4 class="products__itemName">Checked Stretch Dress</h4>
                         <p class="products__itemPrice">$129.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/blue-hipster-backpack.jpg" alt="">
                         <p class="products__itemCategory">BAGS</p>
                         <h4 class="products__itemName">Blue Hipster Backpack</h4>
                         <p class="products__itemPrice">$69.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/demin-overall-shorts.jpg" alt="">
                         <p class="products__itemCategory">DENIM</p>
                         <h4 class="products__itemName">Denim Overall Shorts</h4>
                         <p class="products__itemPrice">$89.00</p>
-                    </a>
-                    <a href="" class="products__item">
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
+                    <div href="" class="products__item">
                         <img src="images/pink-dotted-dress.jpg" alt="">
                         <p class="products__itemCategory">DRESSES</p>
                         <h4 class="products__itemName">Pink Dotted Dress</h4>
                         <p class="products__itemPrice">$99.00</p>
-                    </a>
+                        <button class="products__itemBtn">Add to Cart</button>
+                    </div>
                 </div>
             </section>
             <section class="updates" id="updates">
@@ -137,9 +151,10 @@
                         <p class="updates__desc">Stay updated on our lates product releases, be first to find out
                             about<br>
                             upcoming sales, and get free style tips from our blog. Unsbscribe at any time.</p>
-                        <form action="#" class="updates__form">
-                            <input type="email" name="email" class="updates__email" placeholder="Your Email">
-                            <input type="submit" value="Subscribe!" class="updates__submit" onClick="subscribeBtn()">
+                        <form action="#" class="updates__form" id="updates__form">
+                            <input type="email" name="email" class="updates__email" placeholder="Your Email"
+                                id="updates__email">
+                            <input type="submit" value="Subscribe!" class="updates__submit" onclick="subscribeBtn()">
                         </form>
                     </div>
 
@@ -150,8 +165,10 @@
             <div class="footer__flex">
                 <div class="footer__desc">
                     <div class="footer__descItem"><b>&copy; 2016 Aloha Apparel Co.<br>Powered by HTML and CSS.</b></div>
-                    <div class="footer__descItem"><b><a href="tel:604-604-6040">604-604-6040.</a> <a
-                                href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></b></div>
+                    <div class="footer__descItem"><b><a href="tel:604-604-6040"
+                                class="footer__descTel">604-604-6040.</a> <a href="mailto:info@alohaapparel.com"
+                                class="footer__descEmail">info@alohaapparel.com</a></b>
+                    </div>
                     <div class="footer__descItem footer__descAddress">1490 W Broadway<br>Vancouver, BC, Canada</div>
                 </div>
                 <ul class="footer__forrow">
@@ -169,34 +186,11 @@
             </div>
         </footer>
     </div>
-    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/be014b79a7.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.products__slider').slick({
-                dots: true,
-                autoplay: true,
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                responsive: [{
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                    }
-                }, {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }]
-            });
-        });
+    <script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/be014b79a7.js" crossorigin="anonymous" async></script>
 
-    </script>
 
 </body>
 
