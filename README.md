@@ -10,7 +10,7 @@ You can subscribe your email and add items to your cart.
 - Responsive slider
 
 ## What I use for this
-- HTMl
+- HTML
 - CSS
 - SCSS
 - JS
