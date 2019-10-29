@@ -73,6 +73,10 @@ html {
   }
 }
 
+html:focus {
+  outline: none;
+}
+
 body {
   font-size: 1.6rem;
   font-family: 'Raleway', sans-serif;
@@ -621,6 +625,10 @@ ul, li {
   margin-bottom: 10px;
 }
 
+.products__item:focus {
+  outline: none;
+}
+
 .products__itemCategory {
   font-size: 1.1rem;
   color: #969696;
@@ -675,7 +683,7 @@ ul, li {
 .updates__bg {
   background-image: url("../images/wave-bkgd.jpg");
   background-size: cover;
-  height: 380px;
+  height: 470px;
   width: 100%;
 }
 
@@ -744,7 +752,8 @@ ul, li {
 
 @media (max-width: 415px) {
   .updates__desc {
-    font-size: 1.8rem;
+    font-size: 4vw;
+    padding: 0 8px;
   }
   .updates__desc br {
     display: none;
@@ -839,7 +848,7 @@ ul, li {
 
 @media (max-width: 415px) {
   .footer {
-    padding: 50px 50px 80px;
+    padding: 50px 45px 80px;
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -865,6 +874,7 @@ ul, li {
 
 @media (max-width: 415px) {
   .footer__flex {
+    font-size: 4vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -931,13 +941,12 @@ ul, li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 45vw;
     margin: 0 auto;
   }
 }
 
 .footer__forrow .fab {
-  width: 35px;
+  width: 30px;
 }
 
 @media (max-width: 415px) {

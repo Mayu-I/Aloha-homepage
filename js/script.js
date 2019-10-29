@@ -1,6 +1,6 @@
 //Header-scroll
 $(document).ready(function () {
-    let headerHight = 100;
+    let headerHight = 140;
     $('a[href^=#]').click(function () {
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
@@ -9,19 +9,6 @@ $(document).ready(function () {
         return false;
     });
 });
-
-
-//Form
-function subscribeBtn() {
-    let email = document.getElementById("updates__email").value;
-    if (email.match(/@/)) {
-        alert('Mahalo! Thank you for subscribing!');
-        email = '';
-    } else {
-        alert('Please enter a valid email address');
-    };
-};
-
 
 //Carousel
 $(function () {
@@ -43,29 +30,33 @@ $(function () {
             }
         }]
     });
-
-
-    //Cart-icon
-    let addBtns = document.getElementsByClassName("products__itemBtn");
-    let cartNum = document.getElementsByClassName("header__cartNum header__cartNum-hide")[0];
-    let num = 0;
-    function clickBtn() {
-        cartNum.className = "header__cartNum header__cartNum-visible";
-        num += 1;
-        cartNum.innerText = num;
-    };
-
-
-
-    // console.log("total buttons", addBtns.length);
-
-    for (let i = 0; addBtns.length; ++i) {
-        if (!addBtns[i]) {
-            break;
-        }
-        addBtns[i].addEventListener('click', clickBtn, false);
-        addBtns.oncli
-    }
 });
 
-// [i]
+//Form
+function subscribeBtn() {
+    let email = document.getElementById("updates__email").value;
+    if (email.match(/@/)) {
+        alert('Mahalo! Thank you for subscribing!');
+        email = '';
+    } else {
+        alert('Please enter a valid email address');
+    };
+};
+
+//Cart-icon
+let addBtns = document.getElementsByClassName("products__itemBtn");
+let cartNum = document.getElementsByClassName("header__cartNum header__cartNum-hide")[0];
+let num = 0;
+function clickBtn() {
+    cartNum.className = "header__cartNum header__cartNum-visible";
+    num += 1;
+    cartNum.innerText = num;
+};
+
+for (let i = 0; addBtns.length; ++i) {
+    if (!addBtns[i]) {
+        break;
+    }
+    addBtns[i].addEventListener('click', clickBtn, false);
+    addBtns.oncli
+}
