@@ -33,8 +33,9 @@
                 <a class="header__navItem" href="#featured">FEATURED</a>
                 <a class="header__navItem" href="#updates">UPDATES</a>
             </nav>
+            <a href="#main" class="skip-btn">Skip to<br> content</a>
         </header>
-        <main>
+        <main id="main">
             <section class="headline">
                 <div class="headline__bg">
                     <div class="headline__bg--girl headline__bg--girl--pc"><img src="images/banner-girl.png" alt="">
@@ -152,8 +153,10 @@
                             about<br>
                             upcoming sales, and get free style tips from our blog. Unsbscribe at any time.</p>
                         <form action="#" class="updates__form" id="updates__form">
+                            <label for="email" class="screen-reader-text">email</label>
                             <input type="email" name="email" class="updates__email" placeholder="Your Email"
                                 id="updates__email">
+                            <label for="submit" class="screen-reader-text">submit</label>
                             <input type="submit" value="Subscribe!" class="updates__submit" onclick="subscribeBtn()">
                         </form>
                     </div>
@@ -190,6 +193,7 @@
     <script src="js/script.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/be014b79a7.js" crossorigin="anonymous" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tota11y/0.1.6/tota11y.min.js"></script>
 
 
 </body>

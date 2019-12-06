@@ -98,6 +98,29 @@ ul, li {
   list-style: none;
 }
 
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  clip: auto !important;
+  display: block;
+  height: auto;
+  left: 5px;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* above all content */
+}
+
+#main[tabindex="-1"]:focus {
+  outline: 0;
+}
+
 .wrapper {
   overflow: hidden;
 }
@@ -272,7 +295,7 @@ ul, li {
 .headline__bg {
   width: 100%;
   position: relative;
-  background-image: url("/images/flower-bkgd.jpg");
+  background-image: url("./images/flower-bkgd.jpg");
   background-size: cover;
   height: 680px;
 }
@@ -319,6 +342,7 @@ ul, li {
   bottom: -5px;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
 }
 
@@ -365,6 +389,7 @@ ul, li {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
 }
@@ -541,11 +566,12 @@ ul, li {
 
 .styles__flex--1 .styles__flexItem:hover {
   -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
   transform: translateY(-3px);
 }
 
 .styles__flex--1 .styles__flexItem:nth-of-type(1) {
-  background-image: url("/images/mens-category.jpg");
+  background-image: url("./images/mens-category.jpg");
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -567,25 +593,26 @@ ul, li {
 }
 
 .styles__flex--1 .styles__flexItem:nth-of-type(2) {
-  background-image: url("/images/trends-category.jpg");
+  background-image: url("./images/trends-category.jpg");
 }
 
 .styles__flex--1 .styles__flexItem:nth-of-type(3) {
-  background-image: url("/images/glasses-category.jpg");
+  background-image: url("./images/glasses-category.jpg");
   margin-right: 0;
 }
 
 .styles__flex--2 .styles__flexItem:hover {
   -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
   transform: translateY(-3px);
 }
 
 .styles__flex--2 .styles__flexItem:nth-of-type(1) {
-  background-image: url("/images/sale-category.jpg");
+  background-image: url("./images/sale-category.jpg");
 }
 
 .styles__flex--2 .styles__flexItem:nth-of-type(2) {
-  background-image: url("/images/bags-category.jpg");
+  background-image: url("./images/bags-category.jpg");
 }
 
 @media (max-width: 415px) {
@@ -595,7 +622,7 @@ ul, li {
 }
 
 .styles__flex--2 .styles__flexItem:nth-of-type(3) {
-  background-image: url("/images/womens-category.jpg");
+  background-image: url("./images/womens-category.jpg");
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -703,6 +730,7 @@ ul, li {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
   width: 90%;
@@ -818,6 +846,7 @@ ul, li {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
   right: 5px;
   border-radius: 50px;

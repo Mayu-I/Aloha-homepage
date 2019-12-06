@@ -60,3 +60,12 @@ for (let i = 0; addBtns.length; ++i) {
     addBtns[i].addEventListener('click', clickBtn, false);
     addBtns.oncli
 }
+
+
+// Fix "Skip Link" Focus in Webkit
+
+$(function () {
+    $("a[href^='#']").not("a[href='#']").click(function () {
+        $("#" + $(this).attr("href").slice(1) + "").focus();
+    });
+});
