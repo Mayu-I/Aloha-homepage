@@ -1,5 +1,8 @@
 # Mayu-project01-Aloha
-#### This is my first project!!
+#### a homepage for your client the Aloha Apparel Co. using HTML and CSS.
+
+![aloha APAREL CO ](https://user-images.githubusercontent.com/42310122/73997626-ebf30500-4913-11ea-9416-2dfaf0de0ffd.png)
+
 
 ## Description
 Aloha APAREL CO. is a static online shopping site.
@@ -22,6 +25,3 @@ $ git clone git@github.com:Mayu-I/RED-Mayu-project-01
 $ cd RED-Mayu-project-01
 $ ~do anything~ 
 ```
-
-## Author
-[mayu_cuuuu](https://www.instagram.com/mayu_cuuuu/)
