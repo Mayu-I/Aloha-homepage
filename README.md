@@ -1,5 +1,5 @@
-# Mayu-project01-Aloha
-#### a homepage for your client the Aloha Apparel Co. using HTML and CSS.
+# Aloha Homepage
+#### a homepage for my client the Aloha Apparel Co. using HTML and SCSS.
 
 ![aloha APAREL CO ](https://user-images.githubusercontent.com/42310122/73997626-ebf30500-4913-11ea-9416-2dfaf0de0ffd.png)
 
